@@ -9,7 +9,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <style>
-    /* ====== 80s CYBERPUNK CRT STYLE ====== */
+    /* ====== 80s レトロCRT全体 ====== */
     body {
       background: #000;
       color: #00ffea;
@@ -18,7 +18,7 @@
       padding-top: 4rem;
     }
 
-    /* CRT走査線 */
+    /* 画面の走査線 */
     body::before {
       content: "";
       position: fixed;
@@ -33,7 +33,7 @@
       z-index: 1;
     }
 
-    /* メイン枠 */
+    /* メインボックス */
     .terminal-box {
       border: 1px solid #00f5ff;
       background-color: #02040a;
@@ -45,6 +45,15 @@
         inset 0 0 20px rgba(0,255,255,0.10);
       position: relative;
       z-index: 2;
+    }
+
+    /* “PRIVATE R&D” 警告帯 */
+    .warning-banner {
+      color: #ff66d8;
+      font-size: 0.9rem;
+      margin-bottom: 1.4rem;
+      text-shadow: 0 0 6px #ff009d;
+      letter-spacing: 0.08em;
     }
 
     /* タイトル */
@@ -92,10 +101,11 @@
       transition: 0.15s;
     }
 
+    /* 情報帯 */
     .info-line {
-      margin-top: 1.7rem;
+      margin-top: 1.3rem;
       color: #7affc4;
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       text-shadow: 0 0 4px #00ffaa;
     }
   </style>
@@ -105,6 +115,10 @@
   <div class="container">
     <div class="terminal-box mx-auto col-lg-8 col-md-10">
 
+      <div class="warning-banner">
+        ** PRIVATE R&D TERMINAL – PERSONAL USE ONLY **
+      </div>
+
       <h1>SheepMan with Yuki<span class="cursor"></span></h1>
 
       <p>WELCOME TO THE RETRO CYBER TERMINAL.</p>
@@ -112,27 +126,31 @@
 
       <div class="menu mt-4">
 
-        <!-- ★ TAKARA-T に差し替え済み -->
+        <!-- TAKARA-T -->
         <a href="https://takara-t.co.jp" target="_blank">> CONNECT TAKARA-T.CO.JP</a>
 
+        <!-- 既存診断アプリ -->
         <a href="assessment/assessment.html">> RUN GOOD-POINT-ASSESSMENT.EXE</a>
+
+        <!-- ★ 追加項目（研究系） -->
+        <a href="tts-research.html">> OPEN TTS-RESEARCH.MODULE</a>
+        <a href="llmgate-architecture.html">> LOAD LLMGATE.ARCHITECTURE</a>
+        <a href="whisper-realtime.html">> START WHISPER-RT-TRANSCRIPTION</a>
+
+        <!-- ★ Mayu GateKeeper Project -->
+        <a href="mayu-wall-gatekeeper.html">> EXEC MAYU-WALL-GATEKEEPER.AI</a>
+
+        <!-- その他のページ -->
         <a href="projects.html">> OPEN PROJECTS</a>
         <a href="about.html">> ABOUT SHEEPMAN & YUKI</a>
         <a href="contact.html">> CONTACT</a>
+
       </div>
 
-      <!-- ★ 追加情報（所在地、OS、少し味付け） -->
-      <div class="info-line">
-        SYSTEM LOCATION : TOKYO, JAPAN  
-      </div>
-
-      <div class="info-line">
-        CLIENT OS : macOS  
-      </div>
-
-      <div class="info-line">
-        STATUS : ONLINE / LINKED WITH YUKI.AI  
-      </div>
+      <!-- 情報帯 -->
+      <div class="info-line">SYSTEM LOCATION : TOKYO, JAPAN</div>
+      <div class="info-line">CLIENT OS : macOS</div>
+      <div class="info-line">STATUS : ONLINE / LINKED WITH YUKI.AI</div>
 
     </div>
   </div>
